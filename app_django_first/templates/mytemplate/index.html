@@ -1,0 +1,35 @@
+{% extends 'template.html' %}
+{% block title %} Meu Site {% endblock %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Meu Primeiro Template</h1>
+
+
+    <h1>A soma de A + B é: {{ soma }} </h1>
+
+
+<div class="col-md-12">
+            {% filter force_escape|length %}
+                Numero de Caracteres
+            {% endfilter %}
+        </div>
+        <div class="col-md-12">
+            {% filter force_escape|lower %}
+                Frase em LowerCase
+            {% endfilter %}
+        </div>
+        <div class="col-md-12">
+            {% filter force_escape|upper %}
+                Frase em UperCase
+            {% endfilter %}
+        </div>
+</body>
+</html>
+{% endblock %}

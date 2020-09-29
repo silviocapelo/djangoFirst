@@ -1,0 +1,22 @@
+{% load static %}
+
+<html lang="pt-Br">
+    <head>
+        <link rel="stylesheet"  type="text/css" href="{% static 'css/template.css' %}" >
+        <title>{% block title %} Meu Site {% endblock %}</title>
+    </head>
+    <body>
+    <div class="sidenav">
+        <a href="{%  url 'app_django_first:index' %}">Home</a>
+        <a href="{%  url 'app_django_first:sp' %}">Folha de SP</a>
+        <a href="{%  url 'app_django_first:calc' %}">Calculadora</a>
+        <a href="{%  url 'app_django_first:form' %}">Formulario Model</a>
+        <a href="{%  url 'app_django_first:form2' %}">Formulário Form</a>
+        <a href="/admin">Banco de Dados</a>
+    </div>
+    <div id="content", name="content", class="main">
+        {% block content %}
+        {% endblock %}
+    </div>
+    </body>
+</html>

@@ -1,0 +1,16 @@
+{% extends 'template.html' %}
+{% block title %} Meu Site {% endblock %}
+{% block content %}
+{% load static %}
+ <link rel="stylesheet"  type="text/css" href="{% static 'css/form.css' %}" >
+
+<div class="container">
+    <form method="POST">
+        <h1>Formulário</h1>
+        {{ form.as_p }}
+        {% csrf_token %}
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+{% endblock %}
